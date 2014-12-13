@@ -1,0 +1,4 @@
+@CHARSET "UTF-8";
+.content{ text-indent:2em;}
+.content img{ width:90%; max-width:480px;}
+.ui-page-header-fullscreen > .ui-content, .ui-page-footer-fullscreen > .ui-content{ padding:0px 15px;}

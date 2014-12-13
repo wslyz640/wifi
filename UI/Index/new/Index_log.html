@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><#:C('sitename')#></title>
+	<meta name="keywords" content="<#:C('keyword')#>"/>
+	<meta name="description" content="<#:C('content')#>"/>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="<#$Theme['P']['root']#>/matrix/css/bootstrap.min.css" />
+<link rel="stylesheet" href="<#$Theme['P']['root']#>/matrix/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="<#$Theme['P']['root']#>/matrix/css/matrix-login.css" />
+<link href="<#$Theme['P']['root']#>/matrix/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<!--link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'-->
+<style>
+	.edulist{line-height: 25px;font-size:14px;}
+</style>
+    </head>
+    <body>
+     <link href="<#$Theme['P']['root']#>/css/qq/css/contact.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+  
+    .sideBarNav
+    {
+        right:0px;
+        margin:100px 0px 0px 0px;
+        position:fixed;
+    }  
+    .menubox{display:none;float:right;}
+    .showbox{float:right;margin-top:40px;}
+    .showbox img{border:0px;cursor:pointer;}
+</style>
+ <div class="sideBarNav">  
+
+    <div class="menubox">
+         <div id="con">
+            <div class="list">
+                <div class="contact">
+                    <p>商务合作</p>
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=393358407&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:393358407:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+					<p>技术支持</p>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1031404412&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1031404412:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>          	
+					<div style="display:block;height:50px;">&nbsp;</div>
+				</div>
+             
+            </div>
+            <a id="toTop" onfocus="this.blur()" title="回到顶部" href="#">
+                <img style="border-bottom: 0px; border-left: 0px; border-top: 0px; border-right: 0px" src="<#$Theme['P']['root']#>/css/qq/images/con_bom.png" width="128" height="22">
+			</a>
+        </div>
+    </div>
+    <div class="showbox">
+        <img src="<#$Theme['P']['root']#>/css/qq/images/r2.gif"  width="24" height="88px" id="showqq"/>
+    </div>
+</div>  
+        <div id="loginbox">  
+        	<div class="control-group normal_text"> <h3><img src="<#$Theme['P']['img']#>/wifilogo.png" /></h3></div>
+                  
+            <form id="loginform" class="form-vertical" >
+		       		<div class="alert hide" id="msgbox" style="margin:10px 0px;">
+               <div id="alertmsg"></div>
+             </div>
+            
+                <div class="control-group">
+                    <div class="controls">
+                    	
+                        <div class="main_input_box">
+                        <!--[if IE]>
+          					<div><span style="padding:9px 9px;*line-height:31px; font-size:14px;font-weight:bold;color:#fff; width:60px; display:inline-block;">帐号：</span><span style="width:75%;display:inline-block;">&nbsp;&nbsp;</span></div>
+     					<![endif]-->
+
+                        		
+                            <span class="add-on bg_lg"><i class="icon-user"></i></span><input type="text" placeholder="帐号"  name="txt_user" id="txt_user" />
+                        	
+                        </div>
+                    
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <div class="controls">
+                  
+                        <div class="main_input_box">
+                          <!--[if IE]>
+          					<div><span style="padding:9px 9px;*line-height:31px; font-size:14px;font-weight:bold;color:#fff; width:60px; display:inline-block;">密码:</span><span style="width:75%;display:inline-block;">&nbsp;&nbsp;</span></div>
+     					<![endif]-->
+                            <span class="add-on bg_ly"><i class="icon-lock"></i></span><input type="password" placeholder="密码" name="password" id="password"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="main_input_box" style="font-size:16px;">
+                  		
+                       
+                    </div>
+                </div>
+                   <div class="control-group">
+                    <div class="controls" style="margin-bottom: 10px;">
+                   
+                    <span class="pull-left"><a href="#" class="flip-link btn btn-info" href="javascript:void(0);" id="btn_reg">用户注册</a></span>
+                 
+                    <span class="pull-right"><a type="submit" href="javascript:void(0);" class="btn btn-success" id="btn_log"> 登录</a></span>
+               		</div>
+                </div>
+  <div class="form-actions">
+                <div class="main_input_box"> <a class="btn btn-primary" data-toggle="modal" href="#edu"  data-keyboard="false" data-backdrop="false" >系统简介</a>
+                &nbsp;&nbsp; <a class="btn btn-success" data-toggle="modal" href="#version"  data-keyboard="false" data-backdrop="false" >加盟代理</a>&nbsp;&nbsp; 
+                <a class="btn btn-warning" data-toggle="modal" href="#qa"  data-keyboard="false" data-backdrop="false" >诚邀商户</a></div>         
+                </div>
+                <div class="control-group">
+                <div class="main_input_box"> Copyright（c）2013-2014 www.5find.cn AII Rights Reserved</br>版权所有：<a href="http://www.v-info.cn" target="_blank">秦皇岛微讯信息技术有限公司</a></div>         
+                <div class="main_input_box"> <h5>全国服务热线：400-008-0271 &nbsp;&nbsp; 项目经理：13191813605</h5></div>         
+                </div>
+                
+                 
+            </form>
+            
+            <div class="modal hide fade" id="edu">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>系统简介</h3>
+  </div>
+  <div class="modal-body">
+	<p style="font-size:14px;line-height: 25px;">我发现智能wifi是秦皇岛微讯信息技术有限公司专为商家打造的一套软硬一体的wifi营销系统，它可以将普通wifi设备升级成为商用广告wifi，让普通商家立刻拥有自己专属的广告媒介，商家通过升级后的wifi系统就能进行24小时不间断的广告及品牌推广，并随时收集精准用户信息。</p>
+	<ul class="edulist">
+	<li>商家专属精美官方登录页，时刻彰显品牌形象</li>
+	<li>多种wifi验证方式，让顾客享受贵宾级自由上网体验</li>
+	<li>细致服务关怀完美的移动适配设备，与客户实时紧密互动，彻底替代无人问津的网站主页</li>
+	<li>我发现智慧wifi适用于咖啡厅、餐馆、电影院、美容美发、美体、足疗、娱乐会所、培训机构、商场、机场、酒店、4S店、酒吧、KTV……</li>
+	</ul>
+  </div>
+  
+</div>
+<div class="modal hide fade" id="version">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>加盟代理</h3>
+  </div>
+  <div class="modal-body">
+    <div class="modal-body">
+		<p style="font-size:14px;line-height: 25px;">代理商基本条件：</p>
+		<ol class="edulist">
+		<li>加盟商必须是可以独立承担民事责任的企业或个人。</li>
+		<li>具有良好的团队合作精神，勤奋务实、诚实守信</li>
+		<li>需具备产品市场的开拓和团队管理能力</li>
+		<li>有能力拓展加盟区域市场，能快速发展销售渠道并完成销售计划</li>
+		<li>认可我发现的发展战略和营销理念，遵循秦皇岛微讯信息技术有限公司的市场价格管理规则、具备良好的品牌推广和维护意识。</li>
+		<li>具备区域客户售后服务快速反应能力，确保用户售后服务质量。</li>
+		</ol> 
+	</div>
+  </div>
+  
+</div>
+
+<div class="modal hide fade" id="qa">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>诚邀商户</h3>
+  </div>
+  <div class="modal-body">
+	<ul class="edulist">
+		<li>秦皇岛微讯信息技术有限公司重磅推出“我发现智慧wifi”</li>
+		<li>免费赠送广告路由器。</li>
+		<li>免费赠送商户微留言平台.</li>
+		<li>免费为商户提供技术支持。</li>
+		<li>免费为商户制作店铺宣传页面。</li>
+		<li>免费赠送商户微官网宣传平台.</li>
+		<li>免费为商户提供路由器控制云平台。</li>
+		
+
+	</ul>
+	<p style="font-size:14px;line-height: 25px;">我发现智慧wifi诚邀广大商户的加盟。</p>
+
+  </div>
+  
+</div>
+        </div>
+         <div style="display: none">
+      <script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fff6b82e1b2c7607791dcac12a7ab8ce1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+      </div>
+        <script src="<#$Theme['P']['root']#>/matrix/js/jquery.min.js"></script>
+<script src="<#$Theme['P']['root']#>/matrix/js/bootstrap.min.js"></script> 
+		<script src="<#$Theme['P']['root']#>/matrix/js/common.js"></script> 
+        <script type="text/javascript">
+
+    	document.onkeydown=function(event){
+    	  e = event ? event :(window.event ? window.event : null);
+    	  if(e.keyCode==13){
+    	   //执行的方法
+    	  	$('#btn_log').click();
+    	  }
+    	 }
+    
+        $(function () {
+        	$('#btn_reg').bind('click',function(){
+				location.href='<#:U('index/index/reg')#>';
+				});
+            // bg switcher
+          
+            $('#btn_log').bind('click',function(){
+				var u=$('#txt_user').val();
+				var p=$('#password').val();
+				 if (u == "") {
+					 AlertTips( "请输入用户名",  2000);
+				        return false;
+				 }
+				  if (p == "") {
+					
+					  AlertTips( "请输入密码",2000);
+				        return false;
+				  }
+				  $.ajax({
+					  url: '<#:U('index/user/dologin')#>',
+				        type: "post",
+						data:{
+							'user':u,
+							'password':p,
+							'__hash__':$('input[name="__hash__"]').val()
+							},
+						dataType:'json',
+						error:function(){
+								AlertTips("服务器忙，请稍候再试",2000);
+								},
+						success:function(data){
+								
+								if(data.error==0){
+									location.href=data.url;
+									
+								}else{
+									AlertTips(data.msg, 2000);
+								}
+						}
+					  });
+				});
+        });
+    </script>
+     <script language="javascript">
+        var isshow = false;
+        $(function () {
+            $("#showqq").click(function () {
+                if (!isshow) {
+                    isshow = true;
+                    $(".showbox").css("margin-right", "-3px");
+                    $(".menubox").show('slow');
+                } else {
+                    isshow = false;
+                    $(".showbox").css("margin-right", "0px");
+                    $(".menubox").hide('slow');
+                }
+            });
+
+           
+        });   
+</script>
+    </body>
+
+</html>
+
+

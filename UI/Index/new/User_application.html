@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title><#:C('sitename')#>--会员中心</title>
+<meta name="keywords" content="<#:C('keyword')#>"/>
+<meta name="description" content="<#:C('content')#>"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<include file="Pub:Css"/>
+<link rel="stylesheet" href="<#$Theme['P']['root']#>/matrix/css/uniform.css" />
+<link rel="stylesheet" href="<#$Theme['P']['root']#>/matrix/css/select2.css" />
+</head>
+<body>
+   <include file="Pub:top"/>
+   <include file="Pub:nav"/>
+
+<div id="content">
+<div id="content-header">
+  <div id="breadcrumb"> <a href="<#:U('user/index')#>" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a>  <a href="#" class="current">应用设置</a> </div>
+  <h1>应用设置</h1>
+</div>
+<div class="container-fluid">
+  <hr>
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5>编辑</h5>
+        </div>
+        <div class="widget-content nopadding">
+        <form name='form' action="index.php?m=User&a=doapp" method="post" class="form-horizontal">
+ 		
+        	 
+       		<div class="control-group">
+       		<div class="span1"></div>
+       			<div class="alert alert-block span10 hide" id="msgbox"> 
+              <h4 class="alert-heading">提示信息</h4>
+             <div id="alertmsg"></div>
+              </div>
+       		</div>
+			<div class="control-group">
+              <label class="control-label">认证模式:</label>
+              <div class="controls">
+                <volist name="authmode" id="vo">
+                    <label>
+                      <input type="checkbox" value="<#$vo.key#>" name="authmode[]" <#:showauthcheck($vo['key'],$info['authmode'])#>/>
+                      <#$vo.txt#>
+                    </label>
+                </volist>
+               
+              </div>
+            </div>
+            <div class="control-group"  id="wxacc">
+              <label class="control-label">微信号 :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="微信号"  name="wx" id="wx" value="<#:echojsonkey(showauthdata('3',$info['authmode']),'user')#>" />
+              	 <span class="help-block">请输入您想让用户关注的微信名称</span>
+              </div>
+            </div>
+            <div class="control-group" id="wxauth" >
+              <label class="control-label">微信认证密码 :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="微信认证密码 " name="wxauthpwd" id="wxauthpwd" value="<#:echojsonkey(showauthdata('3',$info['authmode']),'pwd')#>"/>
+               <span class="help-block">输入微信认证上网的认证密码</span>
+              </div>
+            </div>
+             <div class="control-group">
+              <label class="control-label">上网时段控制 :</label>
+              <div class="controls">
+                  <select name="sh" id="sh" class="span3">
+                  <for start="0" end="24">
+					<option value="<#$i#>" <eq name="info['sh']" value="$i">selected</eq>><#$i#>:00点</option>
+					</for>
+					                  
+                  </select>
+                  <label class="span1">到</label>
+                  <select name="eh" id="eh" class="span3">
+                  	<for start="0" end="24">
+					<option value="<#$i#>" <eq name="info['eh']" value="$i">selected</eq>><#$i#>:00点</option>
+					</for>
+                  </select>
+                  <div class="span5"></div>
+              	<span class="span12 help-block">允许用户上网的时间范围。注:比如 7:00~20:00点</span>
+              </div>
+            </div>
+			
+            <div class="control-group">
+              <label class="control-label">上网时间限制 :</label>
+              <div class="controls">
+                <input type="text"  class="span11" placeholder="请输入时间(单位:分钟)"  name="timelimit" id="timelimit" value="<#$info['timelimit']#>"/>
+              <span class="help-block">允许用户上网的时间(单位:分钟)。注:不限制时间请填:0</span>
+              </div>
+            </div>
+			
+            <div class="control-group">
+              <label class="control-label">认证后行为:</label>
+              <div class="controls">
+               
+              
+                <label>
+                <input type="radio" value="1" name="authaction" <eq name="info['authaction']" value="1">checked</eq>>跳转指定网页
+                 </label>  
+                 <label> 
+                  <input type="radio" value="0" name="authaction" <eq name="info['authaction']" value="0">checked</eq>>不跳转
+    		</label>
+      				 <label>
+      				 <input type="radio" value="2" name="authaction" <eq name="info['authaction']" value="2">checked</eq>>跳转请求网页
+				 </label>       
+                <label>
+      				 <input type="radio" value="3" name="authaction" <eq name="info['authaction']" value="3">checked</eq>>跳转到微官网
+				 </label>   
+				  <span class="help-block">用户通过认证后引导用户行为选择。</span> 
+              </div>
+            </div>
+             
+            <div class="control-group">
+              <label class="control-label">指定跳转URL :</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="跳转网页地址 " name="jumpurl" id="jumpurl" value="<#$info['jumpurl']#>"/>
+              </div>
+            </div>
+       
+            <div class="form-actions">
+              <input type="submit" class="btn btn-success" name="sub" value="保存"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+  
+</div></div>
+   <include file="Pub:foot"/>
+<script src="<#$Theme['P']['root']#>/matrix/js/jquery.min.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/jquery.ui.custom.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/bootstrap.min.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/matrix.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/jquery.uniform.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/select2.min.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/common.js"></script> 
+<script>
+$(document).ready(function(){
+	$('input[type=checkbox],input[type=radio],input[type=file]').uniform();
+	
+	$('select').select2();
+
+	$("input[name='authmode[]']").each(function(){
+		if($(this).attr('checked')&&$(this).val()==3){
+			$('#wxauth').show();
+			$('#wxacc').show();
+		}
+		$(this).bind('click',function(){
+				
+				if($(this).attr('checked')&&$(this).val()==3){
+						$('#wxauth').show();
+						$('#wxacc').show();
+				}else if(!$(this).attr('checked')&&$(this).val()==3){
+						$('#wxauth').hide();
+						$('#wxacc').hide();
+				}
+		});
+	});
+
+	$("input[name='sub']").bind('click',function(){
+		var rs=true;
+		
+		
+		
+		$("input[name='authmode[]']").each(function(){
+			if($(this).attr('checked')&&$(this).val()==3){
+				
+					 var v=$('#wxauthpwd').val();
+						
+					 if (v == "") {
+						
+						 AlertTips("请输入微信认证密码",2000);
+					        rs= false;
+					 }
+					 if(!isaccount(v)){
+						
+						 AlertTips("请输入微信认证密码",2000);
+					        rs= false;
+					 }
+					 var wx=$('#wx').val();
+						
+					 if (wx == "") {
+						
+						 AlertTips("请输入微信账号",2000);
+					        rs= false;
+					 }
+				
+				}
+		});
+			
+		return rs;
+	});
+});
+</script>
+</body>
+</html>

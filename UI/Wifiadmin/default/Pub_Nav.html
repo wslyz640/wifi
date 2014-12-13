@@ -1,0 +1,29 @@
+    <!-- navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <button type="button" class="btn btn-navbar visible-phone" id="menu-toggler">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a class="brand" href="<#:U('index')#>"><img src="<#$Theme['P']['img']#>/wifilogo-mini.png" /></a>
+            
+
+            <ul class="nav pull-right">                
+               
+                <li class=" hidden-phone">
+                    	<a href="javascript:void(0);">登录帐号:(<#$Think.session.adminmame#>)</a>
+                </li>
+                 <li class=" hidden-phone">
+                    	<a href="<#:U('Index/pwd')#>">修改密码</a>
+                </li>
+                <li class="settings hidden-phone">
+                    <a href="<#:U('login/loginout')#>" role="button">
+                        <i class="icon-share-alt"></i>
+                    </a>
+                </li>
+            </ul>            
+        </div>
+    </div>
+    <!-- end navbar -->

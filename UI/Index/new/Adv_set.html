@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title><#:C('sitename')#>--会员中心</title>
+<meta name="keywords" content="<#:C('keyword')#>"/>
+<meta name="description" content="<#:C('content')#>"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<include file="Pub:Css"/>
+</head>
+<body>
+
+
+   <include file="Pub:top"/>
+   <include file="Pub:nav"/>
+
+
+
+<!--main-container-part-->
+<div id="content">
+<!--breadcrumbs-->
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="<#:U('user/index')#>" title="返回首页" class="tip-bottom"><i class="icon-home"></i>首页</a><a href="#">营销管理</a> <a href="#"  class="current">短信帐号管理</a></div>
+  </div>
+<!--End-breadcrumbs-->
+    <div class="container-fluid">
+  <hr>
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="widget-box">
+        <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5>短信帐号管理</h5>
+        </div>
+        <div class="widget-content nopadding">
+
+ 		<form class="form-horizontal" name='form' action="<#:U('saveset')#>" method="post" enctype="multipart/form-data">
+        	 
+       		<div class="control-group">
+       		<div class="span1"></div>
+       			<div class="alert alert-block span10 hide" id="msgbox"> 
+              <h4 class="alert-heading">提示信息</h4>
+             <div id="alertmsg"></div>
+              </div>
+       		</div>
+
+            <div class="control-group"  id="wxacc">
+              <label class="control-label">短信帐号:</label>
+              <div class="controls">
+                 <input type="text" placeholder="" id="username" name="user" class="span4" value="<#$info.user#>" >
+			 	
+              </div>
+            </div>
+             
+            <div class="control-group"  id="wxacc">
+              <label class="control-label">密码:</label>
+              <div class="controls">
+               <input type="text" placeholder="" id="password" name="password"  class="span4" value="<#$info.password#>">
+                 
+              </div>
+            </div>
+            
+            
+       
+            <div class="form-actions">
+              <input type="submit" class="btn btn-success" name="sub" id="btn_sub" value="保存帐号"/>&nbsp;&nbsp;
+            
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+
+<!--end-main-container-part-->
+
+   <include file="Pub:foot"/>
+
+
+<script src="<#$Theme['P']['root']#>/matrix/js/jquery.min.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/bootstrap.min.js"></script> 
+<script src="<#$Theme['P']['root']#>/matrix/js/matrix.js"></script> 
+		<script src="<#$Theme['P']['root']#>/matrix/js/common.js"></script> 
+
+<script type="text/javascript">
+  // This function is called from the pop-up menus to transfer to
+  // a different page. Ignore if the value returned is a null string:
+  function goPage (newURL) {
+
+      // if url is empty, skip the menu dividers and reset the menu selection to default
+      if (newURL != "") {
+      
+          // if url is "-", it is this page -- reset the menu:
+          if (newURL == "-" ) {
+              resetMenu();            
+          } 
+          // else, send page to designated URL            
+          else {  
+            document.location.href = newURL;
+          }
+      }
+  }
+
+// resets the menu selection upon entry to this page:
+function resetMenu() {
+   document.gomenu.selector.selectedIndex = 2;
+}
+$(document).ready(function(){
+	
+	$('#sale').trigger('click');
+});
+  $(function(){
+		$('#btn_sub').bind('click',function(){
+			var u=$('#username').val();
+			var sms=$('#password').val();
+			 if (u == "") {
+				 AlertTips( "请输入用户帐号",  2000);
+			        return false;
+			 }
+			  if (sms == "") {
+				
+				  AlertTips( "请输入密码",2000);
+			        return false;
+			  }
+			  return true;
+			});
+	  });
+
+</script>
+</body>
+</html>

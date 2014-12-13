@@ -1,0 +1,197 @@
+@CHARSET "UTF-8";
+@charset "utf-8";
+/* CSS Document */
+img {
+border:none;
+}
+#header {
+	Z-INDEX: 31;WIDTH: 100%; text-align: center; margin-top:42px;
+}
+
+#content_p2 .mainlt {
+	FLOAT: left; WIDTH: 180px;
+}
+#content_p2 .mainrt {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; Z-INDEX: 1; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; POSITION: relative; TEXT-ALIGN: left
+}
+#wrap {
+	PADDING-BOTTOM: 0px; MARGIN: 0px auto; WIDTH:100%; max-width:480px; PADDING-TOP: 0px; TEXT-ALIGN: left; voice-family: inherit
+}
+* + HTML #wrap {
+	PADDING-RIGHT: 10px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+* HTML #wrap {
+	 PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+BODY:unknown #wrap {
+	 PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+:unknown #wrap {
+	 PADDING-BOTTOM: 0px! important; PADDING-TOP: 0px! important
+}
+*:first-child + HTML #wrap {
+ important; PADDING-BOTTOM: 0px! important; PADDING-TOP: 0px! important
+}
+#keyvisualimage {
+	Z-INDEX: 1
+}
+#keyvisualimage2 {
+	
+}
+#btn_left {
+	Z-INDEX: 2
+}
+#btn_right {
+	Z-INDEX: 2
+}
+#content_p2 .index_mainkeyvisual {
+	Z-INDEX: 9; OVERFLOW: hidden; WIDTH:100%; max-width:480px; POSITION: relative; HEIGHT: 200px
+}
+#content_p2 .index_mainkeyvisual A {
+	TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual A:link {
+	TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual A:visited {
+	TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual A:hover {
+	TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual A:active {
+	TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual .keyvisualimage {
+	LEFT: 0px; OVERFLOW: hidden; WIDTH:100%; max-width:480px; POSITION: absolute; TOP: 0px; HEIGHT: 200px
+}
+#content_p2 .index_mainkeyvisual .btn_left {
+	LEFT: 10px; OVERFLOW: hidden; WIDTH: 25px; POSITION: absolute; TOP: 235px; HEIGHT: 37px
+}
+#content_p2 .index_mainkeyvisual .btn_left A {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_left_off.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .index_mainkeyvisual .btn_left A:hover {
+	BACKGROUND: url(keyvisual_array_left_ov.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc")
+}
+#content_p2 .index_mainkeyvisual .btn_left SPAN.dimmed {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_left_dimmed.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; CURSOR: default; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .index_mainkeyvisual .btn_left * {
+	CURSOR: pointer
+}
+#content_p2 .index_mainkeyvisual .btn_right {
+	RIGHT: 10px; OVERFLOW: hidden; WIDTH: 25px; POSITION: absolute; TOP: 235px; HEIGHT: 37px
+}
+#content_p2 .index_mainkeyvisual .btn_right A {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_right_off.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .index_mainkeyvisual .btn_right A:hover {
+	BACKGROUND: url(keyvisual_array_right_ov.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc")
+}
+#content_p2 .index_mainkeyvisual .btn_right SPAN.dimmed {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_right_dimmed.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; CURSOR: default; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .index_mainkeyvisual .btn_right * {
+	CURSOR: pointer
+}
+#content_p2 .index_mainkeyvisual .pagelist {
+	Z-INDEX: 10; RIGHT: 30px; BACKGROUND: url(blank.gif); OVERFLOW: hidden; POSITION: absolute; TOP: 419px; HEIGHT: 17px
+}
+#content_p2 .index_mainkeyvisual .pagelist UL {
+	FLOAT: right
+}
+#content_p2 .index_mainkeyvisual .pagelist UL LI {
+	PADDING-RIGHT: 0px; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 24px; PADDING-TOP: 0px; HEIGHT: 17px
+}
+#content_p2 .index_mainkeyvisual .pagelist UL LI A {
+	DISPLAY: block; FONT-WEIGHT: bold; WIDTH: 24px; COLOR: #666666; HEIGHT: 17px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual .pagelist UL LI A.on {
+	BACKGROUND: url(bg_visualnum.gif) no-repeat 0px 0px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual .pagelist UL LI A.on:hover {
+	BACKGROUND: url(bg_visualnum.gif) no-repeat 0px 0px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+#content_p2 .index_mainkeyvisual .pagelist UL LI A:hover {
+	BACKGROUND: url(bg_visualnum_ov.gif) no-repeat 0px 0px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual {
+	Z-INDEX: 9; OVERFLOW: hidden; WIDTH:100%; max-width:480px; POSITION: relative; HEIGHT: 200px;  margin:0px auto;
+}
+#content_p2 .mainkeyvisual A {
+	TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual A:link {
+	TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual A:visited {
+	TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual A:hover {
+	TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual A:active {
+	TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual .keyvisualimage {
+	LEFT: 0px; OVERFLOW: hidden;WIDTH:100%; max-width:480px; POSITION: absolute; TOP: 0px; HEIGHT: 200px
+}
+#content_p2 .mainkeyvisual .btn_left {
+	LEFT: 30px; OVERFLOW: hidden; WIDTH: 25px; POSITION: absolute; TOP: 42%; HEIGHT: 37px
+}
+#content_p2 .mainkeyvisual .btn_left A {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_left_off.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; TEXT-INDENT: -25px; HEIGHT: 37px 
+}
+#content_p2 .mainkeyvisual .btn_left A:hover {
+	BACKGROUND: url(keyvisual_array_left_ov.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc")
+}
+#content_p2 .mainkeyvisual .btn_left SPAN.dimmed {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_left_dimmed.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; CURSOR: default; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .mainkeyvisual .btn_left * {
+	CURSOR: pointer
+}
+#content_p2 .mainkeyvisual .btn_right {
+	RIGHT: 30px; OVERFLOW: hidden; WIDTH: 25px; POSITION: absolute; TOP:42%; HEIGHT: 37px
+}
+#content_p2 .mainkeyvisual .btn_right A {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_right_off.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .mainkeyvisual .btn_right A:hover {
+	BACKGROUND: url(keyvisual_array_right_ov.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc")
+}
+#content_p2 .mainkeyvisual .btn_right SPAN.dimmed {
+	DISPLAY: block; BACKGROUND: url(keyvisual_array_right_dimmed.png) no-repeat left top; BEHAVIOR: url("iepngfix.htc"); OVERFLOW: hidden; WIDTH: 25px; CURSOR: default; TEXT-INDENT: -25px; HEIGHT: 37px
+}
+#content_p2 .mainkeyvisual .btn_right * {
+	CURSOR: pointer
+}
+#content_p2 .mainkeyvisual_no {
+	BACKGROUND: url(bg_nokeyvisual.gif) repeat-y 0px 0px; POSITION: relative; HEIGHT: 89px
+}
+#content_p2 .content_p2box {
+	WIDTH:100%; max-width:480px;
+}
+#content_p2 .mainkeyvisual .pagelist {
+	Z-INDEX: 100; RIGHT: 26px; BACKGROUND: url(blank.gif); OVERFLOW: hidden; POSITION: absolute; TOP: 20%; HEIGHT: 17px;
+}
+#content_p2 .mainkeyvisual .pagelist UL {
+	FLOAT: right
+}
+#content_p2 .mainkeyvisual .pagelist UL LI {
+	PADDING-RIGHT: 0px;  FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 24px; PADDING-TOP: 0px; HEIGHT: 17px
+}
+#content_p2 .mainkeyvisual .pagelist UL LI A {
+	DISPLAY: block; FONT-WEIGHT: bold; WIDTH: 24px; COLOR: #666666; HEIGHT: 17px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual .pagelist UL LI A.on {
+	BACKGROUND: url(bg_visualnum.gif) no-repeat 0px 0px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual .pagelist UL LI A.on:hover {
+	BACKGROUND: url(bg_visualnum.gif) no-repeat 0px 0px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+#content_p2 .mainkeyvisual .pagelist UL LI A:hover {
+	BACKGROUND: url(bg_visualnum_ov.gif) no-repeat 0px 0px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+

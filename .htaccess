@@ -1,0 +1,10 @@
+# 将 RewriteEngine 模式打开
+RewriteEngine On
+
+RewriteBase /
+# Rewrite 系统规则请勿修改
+RewriteRule ^login(.*)$ index.php/api/login/index/(.*)$
+RewriteRule ^ping(.*)$ index.php/api/ping/index/(.*)$
+RewriteRule ^auth(.*)$ index.php/api/auth/index/(.*)$
+RewriteRule ^portal(.*)$ index.php/api/user/index/(.*)$
+RewriteRule ^library/test/success.html index.php/api/login/apple

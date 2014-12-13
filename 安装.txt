@@ -1,0 +1,24 @@
+1 创建数据库表
+创建数据库时，请将数据库编码选择为 utf-8,否则会出现乱码情况
+将 sql.sql文件导入的数据库中
+2 配置数据库
+  在文件路径 Conf/db.php 中，配置好相关的数据库帐号密码
+3 将网站配置在IIS或者Apcahe上即可运行
+系统在window和mac平台上可以正常搭建。linux平台可能会出现无法预知的问题。
+
+4 URL伪静态问题
+系统已配置了iis6.0和apache下面的伪静态，请勿随意改动。
+IIS下伪静态需要IIS Rewrite组件支持。
+Rwerite文件夹内包含了改组件。配置即可。
+
+配置IIS伪静态
+在IIS的Isapi上添加这个筛选器
+筛选器名称Rewrite
+可执行文件选择 Rewrite.dll　即可以了
+
+系统访问路径:假设为本地url
+
+用户访问:http://localhost 默认帐号: xc ,密码 weixun
+代理商:http://localhost/index.php/agent 默认帐号: xc ,密码 123456
+管理后台:http://localhost/wifiadmin.php 默认帐号: admin 密码 admin
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><#:C('sitename')#>-代理商平台</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	 <include file="Pub:style"/>
+
+	 <link href="<#$Theme['P']['root']#>/bootadmin/css/compiled/tables.css" type="text/css" rel="stylesheet"  />
+<body>
+
+
+<include file="Pub:Nav"/>
+   <include file="Pub:Sidebar"/>
+
+
+	<!-- main container -->
+    <div class="content">
+          <div id="pad-wrapper">
+          <!-- orders table -->
+            <div class="table-wrapper orders-table section">
+                <div class="row head">
+                    <div class="col-md-12">
+                        <h4>资金报表</h4>
+                    </div>
+                </div>
+
+                <div class="row filter-block">
+                    <div class="pull-right">
+                  
+                    </div>
+                </div>
+
+                <div class="">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-md-2">
+                                   		 编号
+                                </th>
+                                <th class="col-md-2">
+                                    <span class="line"></span>
+                                   	日期
+                                </th>
+                                <th class="col-md-2">
+                                    <span class="line"></span>
+                                    	类别
+                                </th>
+                                   <th class="col-md-2">
+                                    <span class="line"></span>
+                                   		原金额
+                                </th>
+                                <th class="col-md-2">
+                                    <span class="line"></span>
+                                   		现金额
+                                </th>
+                                <th class="col-md-2">
+                                    <span class="line"></span>
+                                   		 金额
+                                </th>
+                                <th class="col-md-2">
+                                    <span class="line"></span>
+                                    		描述
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<volist name="lists" id="vo">
+                        		<!-- row -->
+                            <tr class="<eq name="i" value="1">first</eq>">
+                                <td>
+                                   <#$i#>
+                                </td>
+                                <td>
+                                   <#$vo.add_time|date='Y-m-d ',####>
+                                </td>
+                                <td>
+                                <eq name="vo['do']" value="1">充值<else/>扣款</eq>
+                                 
+                                </td>
+                                 <td>
+                                  <#$vo.oldmoney#>
+                                </td>
+                                
+                                <td>
+                                    <#$vo.nowmoney#>
+                                </td>
+                               <td>
+                                     <#$vo.paymoney#>
+                                </td>
+                                  <td>
+                                     <#$vo.desc#>
+                                </td>
+                            </tr>
+                        	</volist>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            
+            	<div class="">
+            		<#$page#>
+            	</div>
+            </div>
+            <!-- end orders table -->
+          </div>
+    </div>
+
+
+ <script src="<#$Theme['P']['js']#>/jquery.js"></script>
+    <script src="<#$Theme['P']['root']#>/bootadmin/js/bootstrap.min.js"></script>
+    <script src="<#$Theme['P']['root']#>/bootadmin/js/theme.js"></script>
+
+</body>
+</html>
